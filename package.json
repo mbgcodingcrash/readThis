@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "inquirer": "^9.0.0"
+    "inquirer": "~v6.5.2",
+    "node-fetch": "^2.6.1"
   },
   "name": "readthis",
   "description": "",
