@@ -8,7 +8,7 @@ const questions = () => {
       {
         type: 'input',
         name: 'title',
-        message: 'What is the title of your project'
+        message: 'What is the title of your project?'
       },
       {
         type: 'input',
@@ -34,7 +34,23 @@ const questions = () => {
         type: 'input',
         name: 'test',
         message: 'Provide test instructions for your project'
-      }
+      },
+      {
+        type: 'checkbox',
+        name: 'licenses',
+        message: 'What did you this project with? (Check which one applies)',
+        choices: ['Apache License 2.0', 'BSD 3-Clause "New" or "Revised" license', 'BSD 2-Clause "Simplified" or "FreeBSD" license', 'GNU General Public License (GPL)', 'GNU Library or "Lesser" General Public License (LGPL)', 'MIT license', 'Mozilla Public License 2.0']
+      },
+      {
+        type: 'input',
+        name: 'github',
+        message: 'Provide a GitHub repo for your project'
+      },
+      {
+        type: 'input',
+        name: 'email',
+        message: 'Provide an email address for your project'
+      },
     ]);
   };
 
@@ -42,7 +58,8 @@ const questions = () => {
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+questions().then(answers => console.log(answers))
+
 
 // Function call to initialize app
-init();
+//init();
